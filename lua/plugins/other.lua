@@ -1,0 +1,96 @@
+return {
+
+    -- {
+    --     "LazyVim/LazyVim",
+    --     opts = {
+    --         -- override highlights
+    --         colorscheme = function()
+    --             -- Example: make Neo-tree background transparent
+    --             vim.api.nvim_set_hl(0, "NeoTreeNormal", { bg = "none" })
+    --             vim.api.nvim_set_hl(0, "NeoTreeNormalNC", { bg = "none" })
+    --
+    --             -- Example: change folder (directory) color to blue
+    --             vim.api.nvim_set_hl(0, "NeoTreeDirectoryName", { fg = "#61afef", bold = true })
+    --
+    --             -- Example: root folder in cyan
+    --             vim.api.nvim_set_hl(0, "NeoTreeRootName", { fg = "#56b6c2", bold = true })
+    --
+    --             -- Example: cursor line highlight in explorer
+    --             vim.api.nvim_set_hl(0, "NeoTreeCursorLine", { bg = "#1c1f24" })
+    --         end,
+    --     },
+    -- },
+
+    -- {
+    --     "neovim/nvim-lspconfig",
+    --     -- This plugin provides the extended functionality
+    --     dependencies = { "Hoffs/omnisharp-extended-lsp.nvim", "hrsh7th/cmp-nvim-lsp" },
+    --     config = function()
+    --         local lspconfig = require("lspconfig")
+    --         local capabilities = require("cmp_nvim_lsp").default_capabilities() -- Or your own capabilities
+    --
+    --         -- 2. Define the on_attach function with the CORRECT keymaps
+    --         -- This function runs whenever an LSP attaches to a buffer.
+    --         local on_attach = function(client, bufnr)
+    --             local bufopts = { noremap = true, silent = true, buffer = bufnr }
+    --
+    --             -- Use the new commands from omnisharp-extended-lsp.nvim
+    --             -- These keymaps are now correctly defined inside on_attach
+    --             vim.keymap.set("n", "gd", "<cmd>lua require('omnisharp_extended').lsp_definition()<cr>", bufopts)
+    --             vim.keymap.set("n", "gD", "<cmd>lua require('omnisharp_extended').lsp_type_definition()<cr>", bufopts)
+    --             vim.keymap.set("n", "gr", "<cmd>lua require('omnisharp_extended').lsp_references()<cr>", bufopts)
+    --             vim.keymap.set("n", "gi", "<cmd>lua require('omnisharp_extended').lsp_implementation()<cr>", bufopts)
+    --
+    --             -- Standard LSP keymaps can remain the same
+    --             vim.keymap.set("n", "K", vim.lsp.buf.hover, bufopts)
+    --             vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, bufopts)
+    --             vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, bufopts)
+    --         end
+    --
+    --         -- 3. Setup OmniSharp with the on_attach function
+    --         lspconfig.omnisharp.setup({
+    --             on_attach = on_attach,
+    --             capabilities = capabilities,
+    --             cmd = { "omnisharp", "--languageserver", "--hostPID", tostring(vim.fn.getpid()) },
+    --             -- Any other OmniSharp settings you need
+    --         })
+    --     end,
+    -- },
+    -- {
+    --     "hrsh7th/nvim-cmp",
+    --     event = "InsertEnter", -- Load cmp when you enter insert mode
+    --     dependencies = {
+    --         "hrsh7th/cmp-nvim-lsp", -- Source for LSP completions
+    --         "hrsh7th/cmp-buffer", -- Source for buffer words
+    --         "hrsh7th/cmp-path", -- Source for file system paths
+    --         "saadparwaiz1/cmp_luasnip", -- For snippets
+    --         "L3MON4D3/LuaSnip", -- Snippet engine
+    --     },
+    --     config = function()
+    --         local cmp = require("cmp")
+    --
+    --         cmp.setup({
+    --             snippet = {
+    --                 expand = function(args)
+    --                     require("luasnip").lsp_expand(args.body)
+    --                 end,
+    --             },
+    --             mapping = cmp.mapping.preset.insert({
+    --                 ["<C-b>"] = cmp.mapping.scroll_docs(-4),
+    --                 ["<C-f>"] = cmp.mapping.scroll_docs(4),
+    --                 ["<C-Space>"] = cmp.mapping.complete(),
+    --                 ["<C-e>"] = cmp.mapping.abort(),
+    --                 ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept selected item
+    --             }),
+    --             sources = cmp.config.sources({
+    --                 { name = "nvim_lsp" },
+    --                 { name = "luasnip" },
+    --                 { name = "buffer" },
+    --                 { name = "path" },
+    --             }),
+    --         })
+    --     end,
+    -- },
+
+    -- Large file detection patch
+}
