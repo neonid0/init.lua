@@ -10,7 +10,7 @@ return {
             openrouter = {
                 __inherited_from = "openai",
                 endpoint = "https://openrouter.ai/api/v1",
-                model = "qwen/qwen3-coder",
+                model = "qwen/qwen3-coder-flash",
                 api_key_name = "AVANTE_OPENROUTER_API_KEY",
                 timeout = 30000,
                 extra_request_body = {

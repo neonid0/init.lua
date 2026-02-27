@@ -13,3 +13,5 @@ vim.cmd([[highlight Normal guibg=NONE ctermbg=NONE]]) -- Set background to none 
 vim.cmd([[highlight NonText guibg=NONE ctermbg=NONE]])
 vim.cmd([[highlight NormalNC guibg=NONE ctermbg=NONE]])
 vim.cmd([[highlight SignColumn guibg=NONE ctermbg=NONE]])
+
+vim.g.snacks_animate = false

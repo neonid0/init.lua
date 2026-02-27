@@ -63,7 +63,7 @@ return {
         },
     },
 
-    -- ~/.m2/repository/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar
+    -- /home/neonid0/.m2/repository/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar
     -- add pyright to lspconfig
     {
         "neovim/nvim-lspconfig",
@@ -155,10 +155,10 @@ return {
     --                     "java.base/java.lang=ALL-UNNAMED",
     --
     --                     -- THIS IS THE CRUCIAL LINE FOR LOMBOK
-    --                     -- ~/.m2/repository/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar
-    --                     -- ~/.m2/repository/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar
-    --                     -- ~/.m2/repository/org/projectlombok/lombok/1.18.34/lombok-1.18.34.jar
-    --                     "-javaagent:~/.m2/repository/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar",
+    --                     -- /home/neonid0/.m2/repository/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar
+    --                     -- /home/neonid0/.m2/repository/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar
+    --                     -- /home/neonid0/.m2/repository/org/projectlombok/lombok/1.18.34/lombok-1.18.34.jar
+    --                     "-javaagent:/home/neonid0/.m2/repository/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar",
     --
     --                     "-jar",
     --                     vim.fn.glob(jdtls_path),
